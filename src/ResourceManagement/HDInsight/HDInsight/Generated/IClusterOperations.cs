@@ -564,6 +564,5 @@ namespace Microsoft.Azure.Management.HDInsight
         /// The azure async operation response.
         /// </returns>
         Task<OperationResource> UpdateGatewaySettingsAsync(string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters, CancellationToken cancellationToken);
-
     }
 }

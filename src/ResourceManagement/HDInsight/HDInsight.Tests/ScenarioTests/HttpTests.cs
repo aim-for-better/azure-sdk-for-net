@@ -224,12 +224,10 @@ namespace HDInsight.Tests
                 var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
                 clusterparams.Version = "3.6";
                 clusterparams.Location = "North Central US";
-                
 
                 client.Clusters.Create(resourceGroup, dnsname, clusterparams);
 
                 var httpGatewaySettings = client.Clusters.GetGatewaySettings(resourceGroup, dnsname);
-
                 Assert.True(httpGatewaySettings.HttpUserEnabled);
 
                 var httpParams = new HttpSettingsParameters
@@ -239,10 +237,11 @@ namespace HDInsight.Tests
                     HttpPassword = "Password1!"
                 };
 
+                Assert.Equal(httpParams.HttpUserEnabled, httpGatewaySettings.HttpUserEnabled);
                 Assert.Equal(httpParams.HttpUsername, httpGatewaySettings.HttpUsername);
+                Assert.NotEqual(httpParams.HttpPassword, httpGatewaySettings.HttpPassword);
 
-                var result = client.Clusters.Delete(resourceGroup, dnsname);
-                
+                client.Clusters.Delete(resourceGroup, dnsname);
             }
         }
 
@@ -262,7 +261,6 @@ namespace HDInsight.Tests
 
                 const string dnsname = "zzy-hdisdk-httptest5";
 
-
                 var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
                 clusterparams.Version = "3.6";
                 clusterparams.Location = "North Central US";
@@ -279,7 +277,6 @@ namespace HDInsight.Tests
                     HttpUsername = "admin",
                     HttpPassword = "Password2!"
                 };
-
               
                 Assert.Equal(httpParams.HttpUsername, httpGatewaySettings.HttpUsername);
 
@@ -287,10 +284,11 @@ namespace HDInsight.Tests
                 Assert.Equal(result.StatusCode, HttpStatusCode.OK);
 
                 httpGatewaySettings = client.Clusters.GetGatewaySettings(resourceGroup, dnsname);
+                Assert.Equal(httpParams.HttpUserEnabled, httpGatewaySettings.HttpUserEnabled);
+                Assert.Equal(httpParams.HttpUsername, httpGatewaySettings.HttpUsername);
                 Assert.Equal(httpParams.HttpPassword, httpGatewaySettings.HttpPassword);
 
-                result = client.Clusters.Delete(resourceGroup, dnsname);
-                
+                client.Clusters.Delete(resourceGroup, dnsname);  
             }
         }
 
@@ -308,7 +306,6 @@ namespace HDInsight.Tests
 
                 var resourceGroup = HDInsightManagementTestUtilities.CreateResourceGroup(resourceManagementClient);
                 
-                
                 const string dnsname = "zzy-hdisdk-httptest5";
                 var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
                 clusterparams.Version = "3.6";
@@ -321,12 +318,10 @@ namespace HDInsight.Tests
                 var core = httpConfigurations.Configurations["core-site"];
                 var gateway = httpConfigurations.Configurations["gateway"];
 
-
                 Assert.NotEmpty(core.Configuration["fs.defaultFS"]);
                 Assert.NotEmpty(gateway.Configuration["restAuthCredential.isEnabled"]);
 
-                var result = client.Clusters.Delete(resourceGroup, dnsname);
-                
+                client.Clusters.Delete(resourceGroup, dnsname); 
             }
         }
     }
