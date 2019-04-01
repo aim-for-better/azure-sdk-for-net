@@ -28,6 +28,7 @@ namespace HDInsight.Tests
     public class HttpTests
     {
         [Fact]
+        [Obsolete]
         public void TestDisableEnableHttp()
         {
             var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
@@ -74,6 +75,7 @@ namespace HDInsight.Tests
         }
 
         [Fact]
+        [Obsolete]
         public void TestEnableEnableHttp()
         {
             var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
@@ -120,6 +122,7 @@ namespace HDInsight.Tests
         }
 
         [Fact]
+        [Obsolete]
         public void TestEnableDisableDisableHttp()
         {
             var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
@@ -169,6 +172,7 @@ namespace HDInsight.Tests
         }
 
         [Fact]
+        [Obsolete]
         public void TestDisableEnableHttpCustomCode()
         {
             var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
@@ -199,6 +203,130 @@ namespace HDInsight.Tests
                 Assert.True(httpSettings.HttpUserEnabled);
 
                 client.Clusters.Delete(resourceGroup, dnsname);
+            }
+        }
+
+        [Fact]
+        public void TestHttpGetGatewaySettings()
+        {
+            var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
+
+            using (var context = UndoContext.Current)
+            {
+                context.Start();
+
+                var client = HDInsightManagementTestUtilities.GetHDInsightManagementClient(handler);
+                var resourceManagementClient = HDInsightManagementTestUtilities.GetResourceManagementClient(handler);
+
+                var resourceGroup = HDInsightManagementTestUtilities.CreateResourceGroup(resourceManagementClient);
+                const string dnsname = "hdisdk-httptest4";
+
+                var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
+                clusterparams.Version = "3.6";
+                clusterparams.Location = "North Central US";
+                
+
+                client.Clusters.Create(resourceGroup, dnsname, clusterparams);
+
+                var httpGatewaySettings = client.Clusters.GetGatewaySettings(resourceGroup, dnsname);
+
+                Assert.True(httpGatewaySettings.HttpUserEnabled);
+
+                var httpParams = new HttpSettingsParameters
+                {
+                    HttpUserEnabled = true,
+                    HttpUsername = "admin",
+                    HttpPassword = "Password1!"
+                };
+
+                Assert.Equal(httpParams.HttpUsername, httpGatewaySettings.HttpUsername);
+
+                var result = client.Clusters.Delete(resourceGroup, dnsname);
+                
+            }
+        }
+
+        [Fact]
+        public void TestHttpUpdateGatewaySettings()
+        {
+            var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
+
+            using (var context = UndoContext.Current)
+            {
+                context.Start();
+
+                var client = HDInsightManagementTestUtilities.GetHDInsightManagementClient(handler);
+                var resourceManagementClient = HDInsightManagementTestUtilities.GetResourceManagementClient(handler);
+
+                var resourceGroup = HDInsightManagementTestUtilities.CreateResourceGroup(resourceManagementClient);
+
+                const string dnsname = "zzy-hdisdk-httptest5";
+
+
+                var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
+                clusterparams.Version = "3.6";
+                clusterparams.Location = "North Central US";
+
+                client.Clusters.Create(resourceGroup, dnsname, clusterparams);
+
+                var httpGatewaySettings = client.Clusters.GetGatewaySettings(resourceGroup, dnsname);
+
+                Assert.True(httpGatewaySettings.HttpUserEnabled);
+
+                var httpParams = new HttpSettingsParameters
+                {
+                    HttpUserEnabled = true,
+                    HttpUsername = "admin",
+                    HttpPassword = "Password2!"
+                };
+
+              
+                Assert.Equal(httpParams.HttpUsername, httpGatewaySettings.HttpUsername);
+
+                var result = client.Clusters.UpdateGatewaySettings(resourceGroup, dnsname, httpParams);
+                Assert.Equal(result.StatusCode, HttpStatusCode.OK);
+
+                httpGatewaySettings = client.Clusters.GetGatewaySettings(resourceGroup, dnsname);
+                Assert.Equal(httpParams.HttpPassword, httpGatewaySettings.HttpPassword);
+
+                result = client.Clusters.Delete(resourceGroup, dnsname);
+                
+            }
+        }
+
+        [Fact]
+        public void TestHttpListConfigurationsSettings()
+        {
+            var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
+
+            using (var context = UndoContext.Current)
+            {
+                context.Start();
+
+                var client = HDInsightManagementTestUtilities.GetHDInsightManagementClient(handler);
+                var resourceManagementClient = HDInsightManagementTestUtilities.GetResourceManagementClient(handler);
+
+                var resourceGroup = HDInsightManagementTestUtilities.CreateResourceGroup(resourceManagementClient);
+                
+                
+                const string dnsname = "zzy-hdisdk-httptest5";
+                var clusterparams = GetClusterSpecHelpers.GetCustomCreateParametersIaas();
+                clusterparams.Version = "3.6";
+                clusterparams.Location = "North Central US";
+
+                client.Clusters.Create(resourceGroup, dnsname, clusterparams);
+
+                var httpConfigurations = client.Clusters.ListConfigurations(resourceGroup,dnsname);
+
+                var core = httpConfigurations.Configurations["core-site"];
+                var gateway = httpConfigurations.Configurations["gateway"];
+
+
+                Assert.NotEmpty(core.Configuration["fs.defaultFS"]);
+                Assert.NotEmpty(gateway.Configuration["restAuthCredential.isEnabled"]);
+
+                var result = client.Clusters.Delete(resourceGroup, dnsname);
+                
             }
         }
     }

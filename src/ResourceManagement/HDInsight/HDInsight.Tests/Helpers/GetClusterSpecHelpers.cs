@@ -24,13 +24,13 @@ namespace HDInsight.Tests.Helpers
     {
         private const string ADLDefaultStorageAccountName = "";
         private const string DefaultContainer = "";
-        private const string StorageAccountName = "";
-        private const string StorageAccountKey = "";
+        private const string StorageAccountName = "dongwwastorage0118";
+        private const string StorageAccountKey = "fgdJupfrP93m18kWFUUtm1ARNVDqck+NMbow7XCZKI2MAxejLrgCQVyr/1ZQ+JP6zHxYNgB7EB5jXEAAXLDcPA==";
         private const string SshKey = "";
-        private const string SshUser = "";
-        private const string SshPassword = "";
-        private const string HttpUser = "";
-        private const string HttpPassword = "";
+        private const string SshUser = "sshuser";
+        private const string SshPassword = "HDInsight123!";
+        private const string HttpUser = "admin";
+        private const string HttpPassword = "HDInsight123!";
         private const string RdpUser = "";
         private const string RdpPassword = "";
         private const string VirtualNetworkId = "";
@@ -38,7 +38,7 @@ namespace HDInsight.Tests.Helpers
         private const string DomainUserName = "";
         private const string DomainUserPassword = "";
         private const string OrganizationalUnitDN = "";
-        private static readonly List<string> ClusterUsersGroupDNs = new List<string> {""};
+        private static readonly List<string> ClusterUsersGroupDNs = new List<string> { "" };
         private static readonly List<string> LdapsUrls = new List<string> { "" };
         private static readonly string[] DomainNameParts = new string[2] { "", "" };
 

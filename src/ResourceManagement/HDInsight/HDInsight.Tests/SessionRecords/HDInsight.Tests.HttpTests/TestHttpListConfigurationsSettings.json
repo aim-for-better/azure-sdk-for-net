@@ -1,0 +1,1277 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourcegroups/hdi6996?api-version=2014-04-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlZ3JvdXBzL2hkaTY5OTY/YXBpLXZlcnNpb249MjAxNC0wNC0wMS1wcmV2aWV3",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\r\n  \"location\": \"West US\"\r\n}",
+      "RequestHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "29"
+        ],
+        "User-Agent": [
+          "Microsoft.Azure.Management.Resources.ResourceManagementClient/2.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996\",\r\n  \"name\": \"hdi6996\",\r\n  \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "167"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-request-id": [
+          "b8d3a008-525d-4bd4-b5a2-8d94075fc33c"
+        ],
+        "x-ms-correlation-request-id": [
+          "b8d3a008-525d-4bd4-b5a2-8d94075fc33c"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T075850Z:b8d3a008-525d-4bd4-b5a2-8d94075fc33c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 07:58:50 GMT"
+        ]
+      },
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\r\n  \"location\": \"North Central US\",\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6\",\r\n    \"osType\": \"Linux\",\r\n    \"tier\": \"Standard\",\r\n    \"clusterDefinition\": {\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {},\r\n      \"configurations\": {\r\n        \"core-site\": {\r\n          \"fs.defaultFS\": \"wasb://zzy-hdisdk-httptest5@dongwwastorage0118.blob.core.windows.net\",\r\n          \"fs.azure.account.key.dongwwastorage0118.blob.core.windows.net\": \"fgdJupfrP93m18kWFUUtm1ARNVDqck+NMbow7XCZKI2MAxejLrgCQVyr/1ZQ+JP6zHxYNgB7EB5jXEAAXLDcPA==\"\r\n        },\r\n        \"gateway\": {\r\n          \"restAuthCredential.isEnabled\": \"true\",\r\n          \"restAuthCredential.username\": \"admin\",\r\n          \"restAuthCredential.password\": \"HDInsight123!\"\r\n        }\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\",\r\n              \"password\": \"HDInsight123!\"\r\n            }\r\n          }\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\",\r\n              \"password\": \"HDInsight123!\"\r\n            }\r\n          }\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Small\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\",\r\n              \"password\": \"HDInsight123!\"\r\n            }\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+      "RequestHeaders": {
+        "Content-Type": [
+          "application/json"
+        ],
+        "Content-Length": [
+          "1883"
+        ],
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"Accepted\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1254"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-hdi-clusteruri": [
+          "https://management.azure.com/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5/azureasyncoperations/create?api-version=2015-03-01-preview"
+        ],
+        "x-ms-request-id": [
+          "f0aaa8f7-10cf-425d-a60e-93d83bb12145"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "f9eac8f4-1107-4d6e-88f6-f87b8255e2fb"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T075900Z:f9eac8f4-1107-4d6e-88f6-f87b8255e2fb"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 07:58:59 GMT"
+        ],
+        "ETag": [
+          "\"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\""
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"Accepted\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1254"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "61641c41-14b4-4b6f-904d-6cad5f92b741"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "84009438-0a4a-461b-91b7-77588c3c238c"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11999"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T075901Z:84009438-0a4a-461b-91b7-77588c3c238c"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 07:59:00 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"ClusterStorageConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1499"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "900f0380-6706-4c8c-a672-d2f4268c81d6"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "f2158344-d187-4f11-878b-cbc97b38c75f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11998"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080002Z:f2158344-d187-4f11-878b-cbc97b38c75f"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:00:02 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"AzureVMConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1492"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "d7c35616-5790-4208-9c9c-fe99c571d913"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "eebd6a8c-5e6c-486e-8f00-a49b6e1bd38a"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11997"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080103Z:eebd6a8c-5e6c-486e-8f00-a49b6e1bd38a"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:01:03 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"AzureVMConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1492"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "a1f3de70-28ad-4136-bb73-79eda4f7cb02"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "90917725-ef0f-4089-8043-e5582041ed27"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11996"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080205Z:90917725-ef0f-4089-8043-e5582041ed27"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:02:04 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "8b78f400-fa0c-49a8-b5eb-0aaf431c50fb"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "9b7807f9-5749-4bf8-a4de-f214681bff20"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11995"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080306Z:9b7807f9-5749-4bf8-a4de-f214681bff20"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:03:06 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "162ae86c-4297-4642-9a41-56610a5e2bc6"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "8a322d14-f950-4ecf-ae1b-d0385dee84b5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11994"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080408Z:8a322d14-f950-4ecf-ae1b-d0385dee84b5"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:04:07 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "4880022c-6792-4583-b2eb-2039b38e155d"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "efe0bf01-3fb0-45e1-b20c-df0c8ba50672"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11993"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080510Z:efe0bf01-3fb0-45e1-b20c-df0c8ba50672"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:05:09 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "f951065e-0e45-4293-bd01-0041c4fd10cb"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "1ded6f57-7217-47d1-a595-6e40e5f8cc8a"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11992"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080611Z:1ded6f57-7217-47d1-a595-6e40e5f8cc8a"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:06:10 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "cb72ef56-9693-4ebb-9777-3a83c7879bf4"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "578a107c-b856-4ccb-856a-de08a12429b7"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11991"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080712Z:578a107c-b856-4ccb-856a-de08a12429b7"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:07:12 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "4355cde2-5b7a-431a-9c4b-9c3e42e1c21f"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "88dbe90b-1f60-4151-881d-c9ba5c89871b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11990"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080814Z:88dbe90b-1f60-4151-881d-c9ba5c89871b"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:08:13 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"HdInsightConfiguration\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1494"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "ebe6a0f2-f6bf-4825-9e66-6572832df848"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "612c670f-9265-4a34-b408-dffaaffeb684"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11989"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T080916Z:612c670f-9265-4a34-b408-dffaaffeb684"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:09:15 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"2.6.5.3006-29\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"InProgress\",\r\n    \"clusterState\": \"Operational\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1496"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "8553842a-c0a4-43b8-877c-f0dd5c09c1ee"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "efdd997b-da76-4daf-9f98-f193f566cecc"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11988"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081017Z:efdd997b-da76-4daf-9f98-f193f566cecc"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:10:17 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5\",\r\n  \"name\": \"zzy-hdisdk-httptest5\",\r\n  \"type\": \"Microsoft.HDInsight/clusters\",\r\n  \"location\": \"North Central US\",\r\n  \"etag\": \"bfd79f0d-d7b0-4906-8f0e-745f449a6bca\",\r\n  \"tags\": null,\r\n  \"properties\": {\r\n    \"clusterVersion\": \"3.6.1000.67\",\r\n    \"clusterHdpVersion\": \"2.6.5.3006-29\",\r\n    \"osType\": \"Linux\",\r\n    \"clusterDefinition\": {\r\n      \"blueprint\": \"https://blueprints.azurehdinsight.net/hadoop-3.6.1000.67.1903060535.json\",\r\n      \"kind\": \"Hadoop\",\r\n      \"componentVersion\": {\r\n        \"Hadoop\": \"2.7\"\r\n      }\r\n    },\r\n    \"computeProfile\": {\r\n      \"roles\": [\r\n        {\r\n          \"name\": \"headnode\",\r\n          \"targetInstanceCount\": 2,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Standard_D3_v2\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"workernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Large\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        },\r\n        {\r\n          \"name\": \"zookeepernode\",\r\n          \"targetInstanceCount\": 3,\r\n          \"hardwareProfile\": {\r\n            \"vmSize\": \"Medium\"\r\n          },\r\n          \"osProfile\": {\r\n            \"linuxOperatingSystemProfile\": {\r\n              \"username\": \"sshuser\"\r\n            }\r\n          },\r\n          \"encryptDataDisks\": false\r\n        }\r\n      ]\r\n    },\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"clusterState\": \"Running\",\r\n    \"createdDate\": \"2019-04-01T07:58:59.063\",\r\n    \"quotaInfo\": {\r\n      \"coresUsed\": 20\r\n    },\r\n    \"connectivityEndpoints\": [\r\n      {\r\n        \"name\": \"SSH\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5-ssh.azurehdinsight.net\",\r\n        \"port\": 22\r\n      },\r\n      {\r\n        \"name\": \"HTTPS\",\r\n        \"protocol\": \"TCP\",\r\n        \"location\": \"zzy-hdisdk-httptest5.azurehdinsight.net\",\r\n        \"port\": 443\r\n      }\r\n    ],\r\n    \"tier\": \"standard\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1491"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "d038cf89-b5ab-41e6-b1e9-c63ae7aecd1d"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "54dc37af-17f5-460b-940d-c36aa4245101"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11987"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081118Z:54dc37af-17f5-460b-940d-c36aa4245101"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:11:18 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5/configurations?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDUvY29uZmlndXJhdGlvbnM/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "POST",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"configurations\": {\r\n    \"core-site\": {\r\n      \"fs.defaultFS\": \"wasbs://zzy-hdisdk-httptest5@dongwwastorage0118.blob.core.windows.net\",\r\n      \"fs.azure.account.key.dongwwastorage0118.blob.core.windows.net\": \"fgdJupfrP93m18kWFUUtm1ARNVDqck+NMbow7XCZKI2MAxejLrgCQVyr/1ZQ+JP6zHxYNgB7EB5jXEAAXLDcPA==\"\r\n    },\r\n    \"gateway\": {\r\n      \"restAuthCredential.isEnabled\": \"true\",\r\n      \"restAuthCredential.username\": \"admin\",\r\n      \"restAuthCredential.password\": \"HDInsight123!\"\r\n    }\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "410"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "2d5ad114-ed42-45f0-a110-f511258a09d6"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "f146469d-96c7-435f-8bc9-9a0d9c56a624"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081119Z:f146469d-96c7-435f-8bc9-9a0d9c56a624"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:11:18 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/resourceGroups/hdi6996/providers/Microsoft.HDInsight/clusters/zzy-hdisdk-httptest5?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Jlc291cmNlR3JvdXBzL2hkaTY5OTYvcHJvdmlkZXJzL01pY3Jvc29mdC5IREluc2lnaHQvY2x1c3RlcnMvenp5LWhkaXNkay1odHRwdGVzdDU/YXBpLXZlcnNpb249MjAxNS0wMy0wMS1wcmV2aWV3",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ]
+      },
+      "ResponseBody": "",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "0"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Retry-After": [
+          "60"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "ClusterResourcesAndSubResources"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/providers/Microsoft.HDInsight/locations/North%20Central%20US/azureasyncoperations/98d9d475-154e-4bcc-bdaa-d3b57d8d7bbe-0-r?api-version=2015-03-01-preview"
+        ],
+        "x-ms-request-id": [
+          "8dc71169-e391-44c5-8e44-4dfe34b2a837"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "25da8115-62f3-4306-8b3a-d78e89d37a7e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [
+          "14999"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081121Z:25da8115-62f3-4306-8b3a-d78e89d37a7e"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:11:20 GMT"
+        ],
+        "Location": [
+          "https://management.azure.com/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/providers/Microsoft.HDInsight/locations/North%20Central%20US/operationresults/98d9d475-154e-4bcc-bdaa-d3b57d8d7bbe-0-r?api-version=2015-03-01-preview"
+        ]
+      },
+      "StatusCode": 202
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/providers/Microsoft.HDInsight/locations/North%20Central%20US/azureasyncoperations/98d9d475-154e-4bcc-bdaa-d3b57d8d7bbe-0-r?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Byb3ZpZGVycy9NaWNyb3NvZnQuSERJbnNpZ2h0L2xvY2F0aW9ucy9Ob3J0aCUyMENlbnRyYWwlMjBVUy9henVyZWFzeW5jb3BlcmF0aW9ucy85OGQ5ZDQ3NS0xNTRlLTRiY2MtYmRhYS1kM2I1N2Q4ZDdiYmUtMC1yP2FwaS12ZXJzaW9uPTIwMTUtMDMtMDEtcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ],
+        "x-ms-version": [
+          "2015-03-01-preview"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"status\": \"InProgress\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "23"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "AsyncOperationsWithRegionalSuffix"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "2354b839-90db-4e7c-97eb-b28c684da1a5"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "5812e61c-5326-4d08-9bf3-655f312e2cbc"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11986"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081122Z:5812e61c-5326-4d08-9bf3-655f312e2cbc"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:11:21 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/providers/Microsoft.HDInsight/locations/North%20Central%20US/azureasyncoperations/98d9d475-154e-4bcc-bdaa-d3b57d8d7bbe-0-r?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Byb3ZpZGVycy9NaWNyb3NvZnQuSERJbnNpZ2h0L2xvY2F0aW9ucy9Ob3J0aCUyMENlbnRyYWwlMjBVUy9henVyZWFzeW5jb3BlcmF0aW9ucy85OGQ5ZDQ3NS0xNTRlLTRiY2MtYmRhYS1kM2I1N2Q4ZDdiYmUtMC1yP2FwaS12ZXJzaW9uPTIwMTUtMDMtMDEtcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ],
+        "x-ms-version": [
+          "2015-03-01-preview"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"status\": \"InProgress\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "23"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "AsyncOperationsWithRegionalSuffix"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "43257b85-30e5-4b7e-ba51-a373f4f16097"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "a8f5ed9e-58dd-46c1-88b0-8f96c22bb780"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11985"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081223Z:a8f5ed9e-58dd-46c1-88b0-8f96c22bb780"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:12:22 GMT"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/964c10bb-8a6c-43bc-83d3-6b318c6c7305/providers/Microsoft.HDInsight/locations/North%20Central%20US/azureasyncoperations/98d9d475-154e-4bcc-bdaa-d3b57d8d7bbe-0-r?api-version=2015-03-01-preview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTY0YzEwYmItOGE2Yy00M2JjLTgzZDMtNmIzMThjNmM3MzA1L3Byb3ZpZGVycy9NaWNyb3NvZnQuSERJbnNpZ2h0L2xvY2F0aW9ucy9Ob3J0aCUyMENlbnRyYWwlMjBVUy9henVyZWFzeW5jb3BlcmF0aW9ucy85OGQ5ZDQ3NS0xNTRlLTRiY2MtYmRhYS1kM2I1N2Q4ZDdiYmUtMC1yP2FwaS12ZXJzaW9uPTIwMTUtMDMtMDEtcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "ARM",
+          "SDK",
+          "v2.1.0"
+        ],
+        "x-ms-version": [
+          "2015-03-01-preview"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"status\": \"Succeeded\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "22"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-hdi-matched-rule": [
+          "AsyncOperationsWithRegionalSuffix"
+        ],
+        "x-ms-hdi-routed-to": [
+          "RegionalRp"
+        ],
+        "x-ms-request-id": [
+          "5d74d8ac-1f84-4e0c-ac25-9751acdee200"
+        ],
+        "x-ms-hdi-served-by": [
+          "northcentralus"
+        ],
+        "x-ms-correlation-request-id": [
+          "cdc52549-8887-4459-b7a2-7c536d5165c8"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "11984"
+        ],
+        "x-ms-routing-request-id": [
+          "JAPANEAST:20190401T081324Z:cdc52549-8887-4459-b7a2-7c536d5165c8"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Mon, 01 Apr 2019 08:13:23 GMT"
+        ]
+      },
+      "StatusCode": 200
+    }
+  ],
+  "Names": {
+    "CreateResourceGroup": [
+      "hdi6996"
+    ]
+  },
+  "Variables": {
+    "SubscriptionId": "964c10bb-8a6c-43bc-83d3-6b318c6c7305"
+  }
+}
