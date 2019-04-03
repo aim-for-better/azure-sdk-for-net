@@ -35,8 +35,9 @@ namespace Microsoft.Azure.Management.HDInsight
     public static partial class ClusterOperationsExtensions
     {
         /// <summary>
-        /// This API has been deprecated. Please use BeginUpdateGatewaySettings.
-        /// Begins configuring the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// BeginUpdateGatewaySettings. Begins configuring the HTTP settings
+        /// on the specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -54,10 +55,10 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The cluster long running operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated. Please use BeginUpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use BeginUpdateGatewaySettings.")]
         public static HDInsightOperationResponse BeginConfiguringHttpSettings(this IClusterOperations operations, string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters)
         {
-            return Task.Factory.StartNew((object s) => 
+            return Task.Factory.StartNew((object s) =>
             {
                 return ((IClusterOperations)s).BeginConfiguringHttpSettingsAsync(resourceGroupName, clusterName, httpSettingsParameters);
             }
@@ -65,8 +66,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This API has been deprecated. Please use BeginUpdateGatewaySettings.
-        /// Begins configuring the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// BeginUpdateGatewaySettings. Begins configuring the HTTP settings
+        /// on the specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -84,12 +86,12 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The cluster long running operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated. Please use BeginUpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use BeginUpdateGatewaySettings.")]
         public static Task<HDInsightOperationResponse> BeginConfiguringHttpSettingsAsync(this IClusterOperations operations, string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters)
         {
             return operations.BeginConfiguringHttpSettingsAsync(resourceGroupName, clusterName, httpSettingsParameters, CancellationToken.None);
         }
-        
+
         /// <summary>
         /// Begins configuring the RDP settings on the specified cluster.
         /// </summary>
@@ -399,8 +401,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This API has been deprecated.Please use UpdateGatewaySettings.
-        /// Configures the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// UpdateGatewaySettings. Configures the HTTP settings on the
+        /// specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -418,10 +421,10 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The azure async operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated.Please use UpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use UpdateGatewaySettings.")]
         public static OperationResource ConfigureHttpSettings(this IClusterOperations operations, string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters)
         {
-            return Task.Factory.StartNew((object s) => 
+            return Task.Factory.StartNew((object s) =>
             {
                 return ((IClusterOperations)s).ConfigureHttpSettingsAsync(resourceGroupName, clusterName, httpSettingsParameters);
             }
@@ -429,8 +432,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This API has been deprecated.Please use UpdateGatewaySettings.
-        /// Configures the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// UpdateGatewaySettings. Configures the HTTP settings on the
+        /// specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -448,12 +452,12 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The azure async operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated.Please use UpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use UpdateGatewaySettings.")]
         public static Task<OperationResource> ConfigureHttpSettingsAsync(this IClusterOperations operations, string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters)
         {
             return operations.ConfigureHttpSettingsAsync(resourceGroupName, clusterName, httpSettingsParameters, CancellationToken.None);
         }
-        
+
         /// <summary>
         /// Configures the RDP settings on the specified cluster.
         /// </summary>
@@ -849,8 +853,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This api has been deprecated. Pleause use GetGatewaySettings.
-        /// Gets the connectivity settings for the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// GetGatewaySettings. Gets the connectivity settings for the
+        /// specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -865,10 +870,10 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The payload for a Configure HTTP settings request.
         /// </returns>
-        [Obsolete("This api has been deprecated. Pleause use GetGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use GetGatewaySettings.")]
         public static HttpConnectivitySettings GetConnectivitySettings(this IClusterOperations operations, string resourceGroupName, string clusterName)
         {
-            return Task.Factory.StartNew((object s) => 
+            return Task.Factory.StartNew((object s) =>
             {
                 return ((IClusterOperations)s).GetConnectivitySettingsAsync(resourceGroupName, clusterName);
             }
@@ -876,8 +881,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This api has been deprecated. Pleause use GetGatewaySettings.
-        /// Gets the connectivity settings for the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// GetGatewaySettings. Gets the connectivity settings for the
+        /// specified cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -892,12 +898,12 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The payload for a Configure HTTP settings request.
         /// </returns>
-        [Obsolete("This api has been deprecated. Pleause use GetGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use GetGatewaySettings.")]
         public static Task<HttpConnectivitySettings> GetConnectivitySettingsAsync(this IClusterOperations operations, string resourceGroupName, string clusterName)
         {
             return operations.GetConnectivitySettingsAsync(resourceGroupName, clusterName, CancellationToken.None);
         }
-        
+
         /// <summary>
         /// Gets the status of the Create operation.
         /// </summary>
@@ -1151,7 +1157,7 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// Gets all configuration information fro an HDInsight cluster.
+        /// Gets all configuration information for an HDInsight cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -1176,7 +1182,7 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// Gets all configuration information fro an HDInsight cluster.
+        /// Gets all configuration information for an HDInsight cluster.
         /// </summary>
         /// <param name='operations'>
         /// Reference to the
@@ -1446,6 +1452,5 @@ namespace Microsoft.Azure.Management.HDInsight
         {
             return operations.UpdateGatewaySettingsAsync(resourceGroupName, clusterName, httpSettingsParameters, CancellationToken.None);
         }
-
     }
 }

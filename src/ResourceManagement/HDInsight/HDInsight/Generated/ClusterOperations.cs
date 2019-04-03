@@ -68,8 +68,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This API has been deprecated. Please use BeginUpdateGatewaySettings.
-        /// Begins configuring the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// BeginUpdateGatewaySettings. Begins configuring the HTTP settings
+        /// on the specified cluster.
         /// </summary>
         /// <param name='resourceGroupName'>
         /// Required. The name of the resource group.
@@ -86,7 +87,7 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The cluster long running operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated. Please use BeginUpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use BeginUpdateGatewaySettings.")]
         public async Task<HDInsightOperationResponse> BeginConfiguringHttpSettingsAsync(string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters, CancellationToken cancellationToken)
         {
             // Validate
@@ -102,7 +103,7 @@ namespace Microsoft.Azure.Management.HDInsight
             {
                 throw new ArgumentNullException("httpSettingsParameters");
             }
-            
+
             // Tracing
             bool shouldTrace = TracingAdapter.IsEnabled;
             string invocationId = null;
@@ -115,7 +116,7 @@ namespace Microsoft.Azure.Management.HDInsight
                 tracingParameters.Add("httpSettingsParameters", httpSettingsParameters);
                 TracingAdapter.Enter(invocationId, this, "BeginConfiguringHttpSettingsAsync", tracingParameters);
             }
-            
+
             // Construct URL
             string url = "";
             url = url + "/subscriptions/";
@@ -148,7 +149,7 @@ namespace Microsoft.Azure.Management.HDInsight
             }
             url = baseUrl + "/" + url;
             url = url.Replace(" ", "%20");
-            
+
             // Create HTTP transport objects
             HttpRequestMessage httpRequest = null;
             try
@@ -156,37 +157,37 @@ namespace Microsoft.Azure.Management.HDInsight
                 httpRequest = new HttpRequestMessage();
                 httpRequest.Method = HttpMethod.Post;
                 httpRequest.RequestUri = new Uri(url);
-                
+
                 // Set Headers
                 httpRequest.Headers.Add("User-Agent", _userAgentString);
-                
+
                 // Set Credentials
                 cancellationToken.ThrowIfCancellationRequested();
                 await this.Client.Credentials.ProcessHttpRequestAsync(httpRequest, cancellationToken).ConfigureAwait(false);
-                
+
                 // Serialize Request
                 string requestContent = null;
                 JToken requestDoc = null;
-                
+
                 JObject httpSettingsParametersValue = new JObject();
                 requestDoc = httpSettingsParametersValue;
-                
+
                 httpSettingsParametersValue["restAuthCredential.isEnabled"] = httpSettingsParameters.HttpUserEnabled;
-                
+
                 if (httpSettingsParameters.HttpUsername != null)
                 {
                     httpSettingsParametersValue["restAuthCredential.username"] = httpSettingsParameters.HttpUsername;
                 }
-                
+
                 if (httpSettingsParameters.HttpPassword != null)
                 {
                     httpSettingsParametersValue["restAuthCredential.password"] = httpSettingsParameters.HttpPassword;
                 }
-                
+
                 requestContent = requestDoc.ToString(Newtonsoft.Json.Formatting.Indented);
                 httpRequest.Content = new StringContent(requestContent, Encoding.UTF8);
                 httpRequest.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
-                
+
                 // Send Request
                 HttpResponseMessage httpResponse = null;
                 try
@@ -212,7 +213,7 @@ namespace Microsoft.Azure.Management.HDInsight
                         }
                         throw ex;
                     }
-                    
+
                     // Create Result
                     HDInsightOperationResponse result = null;
                     // Deserialize Response
@@ -230,7 +231,7 @@ namespace Microsoft.Azure.Management.HDInsight
                     {
                         result.RequestId = httpResponse.Headers.GetValues("x-ms-request-id").FirstOrDefault();
                     }
-                    
+
                     if (shouldTrace)
                     {
                         TracingAdapter.Exit(invocationId, result);
@@ -253,7 +254,7 @@ namespace Microsoft.Azure.Management.HDInsight
                 }
             }
         }
-        
+
         /// <summary>
         /// Begins configuring the RDP settings on the specified cluster.
         /// </summary>
@@ -2190,8 +2191,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This API has been deprecated.Please use UpdateGatewaySettings.
-        /// Configures the HTTP settings on the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// UpdateGatewaySettings. Configures the HTTP settings on the
+        /// specified cluster.
         /// </summary>
         /// <param name='resourceGroupName'>
         /// Required. The name of the resource group.
@@ -2208,7 +2210,7 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The azure async operation response.
         /// </returns>
-        [Obsolete("This API has been deprecated.Please use UpdateGatewaySettings.")]
+        [Obsolete("This method has been deprecated and will stop working. Please use UpdateGatewaySettings.")]
         public async Task<OperationResource> ConfigureHttpSettingsAsync(string resourceGroupName, string clusterName, HttpSettingsParameters httpSettingsParameters, CancellationToken cancellationToken)
         {
             HDInsightManagementClient client = this.Client;
@@ -2223,7 +2225,7 @@ namespace Microsoft.Azure.Management.HDInsight
                 tracingParameters.Add("httpSettingsParameters", httpSettingsParameters);
                 TracingAdapter.Enter(invocationId, this, "ConfigureHttpSettingsAsync", tracingParameters);
             }
-            
+
             cancellationToken.ThrowIfCancellationRequested();
             HDInsightOperationResponse response = await client.Clusters.BeginConfiguringHttpSettingsAsync(resourceGroupName, clusterName, httpSettingsParameters, cancellationToken).ConfigureAwait(false);
             cancellationToken.ThrowIfCancellationRequested();
@@ -2245,15 +2247,15 @@ namespace Microsoft.Azure.Management.HDInsight
                     delayInSeconds = client.LongRunningOperationRetryTimeout;
                 }
             }
-            
+
             if (shouldTrace)
             {
                 TracingAdapter.Exit(invocationId, result);
             }
-            
+
             return result;
         }
-        
+
         /// <summary>
         /// Configures the RDP settings on the specified cluster.
         /// </summary>
@@ -3809,8 +3811,9 @@ namespace Microsoft.Azure.Management.HDInsight
         }
 
         /// <summary>
-        /// This api has been deprecated. Pleause use GetGatewaySettings. 
-        /// Gets the connectivity settings for the specified cluster.
+        /// This method has been deprecated and will stop working. Please use
+        /// GetGatewaySettings. Gets the connectivity settings for the
+        /// specified cluster.
         /// </summary>
         /// <param name='resourceGroupName'>
         /// Required. The name of the resource group.
@@ -3824,7 +3827,6 @@ namespace Microsoft.Azure.Management.HDInsight
         /// <returns>
         /// The payload for a Configure HTTP settings request.
         /// </returns>
-        [Obsolete("This api has been deprecated. Pleause use GetGatewaySettings. ")]
         public async Task<HttpConnectivitySettings> GetConnectivitySettingsAsync(string resourceGroupName, string clusterName, CancellationToken cancellationToken)
         {
             // Validate
@@ -3836,7 +3838,7 @@ namespace Microsoft.Azure.Management.HDInsight
             {
                 throw new ArgumentNullException("clusterName");
             }
-            
+
             // Tracing
             bool shouldTrace = TracingAdapter.IsEnabled;
             string invocationId = null;
@@ -3848,7 +3850,7 @@ namespace Microsoft.Azure.Management.HDInsight
                 tracingParameters.Add("clusterName", clusterName);
                 TracingAdapter.Enter(invocationId, this, "GetConnectivitySettingsAsync", tracingParameters);
             }
-            
+
             // Construct URL
             string url = "";
             url = url + "/subscriptions/";
@@ -3881,7 +3883,7 @@ namespace Microsoft.Azure.Management.HDInsight
             }
             url = baseUrl + "/" + url;
             url = url.Replace(" ", "%20");
-            
+
             // Create HTTP transport objects
             HttpRequestMessage httpRequest = null;
             try
@@ -3889,14 +3891,14 @@ namespace Microsoft.Azure.Management.HDInsight
                 httpRequest = new HttpRequestMessage();
                 httpRequest.Method = HttpMethod.Get;
                 httpRequest.RequestUri = new Uri(url);
-                
+
                 // Set Headers
                 httpRequest.Headers.Add("User-Agent", _userAgentString);
-                
+
                 // Set Credentials
                 cancellationToken.ThrowIfCancellationRequested();
                 await this.Client.Credentials.ProcessHttpRequestAsync(httpRequest, cancellationToken).ConfigureAwait(false);
-                
+
                 // Send Request
                 HttpResponseMessage httpResponse = null;
                 try
@@ -3922,7 +3924,7 @@ namespace Microsoft.Azure.Management.HDInsight
                         }
                         throw ex;
                     }
-                    
+
                     // Create Result
                     HttpConnectivitySettings result = null;
                     // Deserialize Response
@@ -3936,7 +3938,7 @@ namespace Microsoft.Azure.Management.HDInsight
                         {
                             responseDoc = JToken.Parse(responseContent);
                         }
-                        
+
                         if (responseDoc != null && responseDoc.Type != JTokenType.Null)
                         {
                             JToken restAuthCredentialisEnabledValue = responseDoc["restAuthCredential.isEnabled"];
@@ -3945,14 +3947,14 @@ namespace Microsoft.Azure.Management.HDInsight
                                 bool restAuthCredentialisEnabledInstance = ((bool)restAuthCredentialisEnabledValue);
                                 result.HttpUserEnabled = restAuthCredentialisEnabledInstance;
                             }
-                            
+
                             JToken restAuthCredentialusernameValue = responseDoc["restAuthCredential.username"];
                             if (restAuthCredentialusernameValue != null && restAuthCredentialusernameValue.Type != JTokenType.Null)
                             {
                                 string restAuthCredentialusernameInstance = ((string)restAuthCredentialusernameValue);
                                 result.HttpUsername = restAuthCredentialusernameInstance;
                             }
-                            
+
                             JToken restAuthCredentialpasswordValue = responseDoc["restAuthCredential.password"];
                             if (restAuthCredentialpasswordValue != null && restAuthCredentialpasswordValue.Type != JTokenType.Null)
                             {
@@ -3960,14 +3962,14 @@ namespace Microsoft.Azure.Management.HDInsight
                                 result.HttpPassword = restAuthCredentialpasswordInstance;
                             }
                         }
-                        
+
                     }
                     result.StatusCode = statusCode;
                     if (httpResponse.Headers.Contains("x-ms-request-id"))
                     {
                         result.RequestId = httpResponse.Headers.GetValues("x-ms-request-id").FirstOrDefault();
                     }
-                    
+
                     if (shouldTrace)
                     {
                         TracingAdapter.Exit(invocationId, result);
@@ -3990,7 +3992,6 @@ namespace Microsoft.Azure.Management.HDInsight
                 }
             }
         }
-
 
         /// <summary>
         /// Gets the Gateway settings for the specified cluster.
@@ -7333,6 +7334,5 @@ namespace Microsoft.Azure.Management.HDInsight
 
             return result;
         }
-
     }
 }
