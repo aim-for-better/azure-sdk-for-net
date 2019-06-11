@@ -26,7 +26,10 @@ For more information, please visit https://aka.ms/hdi-config-update
 	<PropertyGroup>
 		<TargetFrameworks>$(SdkTargetFx)</TargetFrameworks>
 	</PropertyGroup>
-
+  
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
 	<!-- Please do not move/edit code below this line -->
 	<Import Condition=" Exists('$([MSBuild]::GetPathOfFileAbove(AzSdk.RP.props))') " Project="$([MSBuild]::GetPathOfFileAbove('AzSdk.RP.props'))" />
 	<!-- Please do not move/edit code above this line -->

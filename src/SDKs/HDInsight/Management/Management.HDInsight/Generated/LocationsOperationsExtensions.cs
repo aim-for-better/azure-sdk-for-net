@@ -28,7 +28,7 @@ namespace Microsoft.Azure.Management.HDInsight
             /// The operations group for this extension method.
             /// </param>
             /// <param name='location'>
-            /// The location to get capabilities for.
+            /// The location where resources live in.
             /// </param>
             public static UsagesListResult ListUsages(this ILocationsOperations operations, string location)
             {
@@ -42,7 +42,7 @@ namespace Microsoft.Azure.Management.HDInsight
             /// The operations group for this extension method.
             /// </param>
             /// <param name='location'>
-            /// The location to get capabilities for.
+            /// The location where resources live in.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -50,6 +50,40 @@ namespace Microsoft.Azure.Management.HDInsight
             public static async Task<UsagesListResult> ListUsagesAsync(this ILocationsOperations operations, string location, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListUsagesWithHttpMessagesAsync(location, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Lists the billingSpecs for the specified subscription and location.
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='location'>
+            /// The location where resources live in.
+            /// </param>
+            public static BillingResponseListResult ListBillingSpecs(this ILocationsOperations operations, string location)
+            {
+                return operations.ListBillingSpecsAsync(location).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Lists the billingSpecs for the specified subscription and location.
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='location'>
+            /// The location where resources live in.
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<BillingResponseListResult> ListBillingSpecsAsync(this ILocationsOperations operations, string location, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.ListBillingSpecsWithHttpMessagesAsync(location, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

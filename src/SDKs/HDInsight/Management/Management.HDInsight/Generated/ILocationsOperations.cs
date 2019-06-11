@@ -27,7 +27,7 @@ namespace Microsoft.Azure.Management.HDInsight
         /// Lists the usages for the specified location.
         /// </summary>
         /// <param name='location'>
-        /// The location to get capabilities for.
+        /// The location where resources live in.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -45,5 +45,27 @@ namespace Microsoft.Azure.Management.HDInsight
         /// Thrown when a required parameter is null
         /// </exception>
         Task<AzureOperationResponse<UsagesListResult>> ListUsagesWithHttpMessagesAsync(string location, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Lists the billingSpecs for the specified subscription and location.
+        /// </summary>
+        /// <param name='location'>
+        /// The location where resources live in.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="ErrorResponseException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.SerializationException">
+        /// Thrown when unable to deserialize the response
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<AzureOperationResponse<BillingResponseListResult>> ListBillingSpecsWithHttpMessagesAsync(string location, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

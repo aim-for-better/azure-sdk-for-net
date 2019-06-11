@@ -29,5 +29,17 @@ namespace Management.HDInsight.Tests
                 Assert.NotNull(usage.Unit);
             }
         }
+
+        [Fact]
+        public void TestGetBillingSpecs()
+        {
+            TestInitialize();
+
+            var billingSpecs = HDInsightClient.Locations.ListBillingSpecs(CommonData.Location);
+
+            Assert.NotNull(billingSpecs);
+            Assert.NotNull(billingSpecs.VmSizes);
+            Assert.NotNull(billingSpecs.VmSizeFilters);
+        }
     }
 }
