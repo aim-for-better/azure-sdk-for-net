@@ -82,6 +82,7 @@ namespace Management.HDInsight.Tests
 
             var cluster = HDInsightClient.Clusters.Create(CommonData.ResourceGroupName, clusterName, createParams);
             ValidateCluster(clusterName, createParams, cluster);
+            HDInsightClient.Clusters.Delete(CommonData.ResourceGroupName,cluster.Name);
         }
 
         [Fact]
