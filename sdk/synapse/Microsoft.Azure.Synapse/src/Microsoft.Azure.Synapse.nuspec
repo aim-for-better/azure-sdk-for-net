@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Azure.Synapse</id>
+    <version>0.9.0-prevtest2 </version>
+    <title>Microsoft.Azure.Synapse</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Azure/azure-sdk-for-net</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft Azure Synapse;Synapse</description>
+    <releaseNotes>Add strong name sign</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Microsoft Azure Synapse;Synapse</tags>
+  </metadata>
+  <files>
+    <file src="F:\source\azure-sdk-for-net\artifacts\bin\Microsoft.Azure.Synapse\Debug\**.dll" target="lib\"></file>
+  </files>
+
+</package>
