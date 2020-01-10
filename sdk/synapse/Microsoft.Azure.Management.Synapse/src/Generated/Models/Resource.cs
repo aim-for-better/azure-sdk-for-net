@@ -15,9 +15,6 @@ namespace Microsoft.Azure.Management.Synapse.Models
     using Newtonsoft.Json;
     using System.Linq;
 
-    /// <summary>
-    /// The resource model definition
-    /// </summary>
     public partial class Resource : IResource
     {
         /// <summary>

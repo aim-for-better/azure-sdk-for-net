@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>Microsoft.Azure.Management.Synapse</id>
-    <version>0.9.0-prevtest4</version>
+    <version>0.9.0-prevtest5</version>
     <title>Microsoft.Azure.Management.Synapse</title>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
@@ -11,7 +11,7 @@
     <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Microsoft Azure Synapse Management;Synapse;Synapse Management</description>
-    <releaseNotes>Remove AdlaResourceId in workspace and refactor all operation id.</releaseNotes>
+    <releaseNotes>Fixing sqlpool lack of location parameter error.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>Microsoft Azure Synapse Management;Synapse;Synapse Management</tags>
   </metadata>

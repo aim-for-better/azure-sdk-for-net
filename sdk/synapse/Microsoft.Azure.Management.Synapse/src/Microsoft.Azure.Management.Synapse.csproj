@@ -7,11 +7,11 @@
 		<PackageId>Microsoft.Azure.Management.Synapse</PackageId>
 		<Description>Azure Synapse Management SDK Library</Description>
 		<AssemblyName>Microsoft.Azure.Management.Synapse</AssemblyName>
-		<Version>0.9.0-prevtest4</Version>
+		<Version>0.9.0-prevtest5</Version>
 		<PackageTags>Microsoft Azure Synapse Analytics Management;Synapse;Synapse Management</PackageTags>
 		<PackageReleaseNotes>
 			<![CDATA[
-      Remove AdlaResourceId in workspace and refactor all opertion id
+      Fixing sqlpool lack of location parameter error.
       ]]>
 		</PackageReleaseNotes>
 

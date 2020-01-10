@@ -1195,6 +1195,10 @@ namespace Microsoft.Azure.Management.Synapse
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "sqlPoolInfo");
             }
+            if (sqlPoolInfo != null)
+            {
+                sqlPoolInfo.Validate();
+            }
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
             string _invocationId = null;
